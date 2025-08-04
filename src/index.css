@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 10% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 10% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 10% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 220 10% 12%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 10% 18%;
+    --input: 220 10% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 10% 4%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 10% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 10% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    background: linear-gradient(135deg, #0a0a0a 0%, #050505 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+}
